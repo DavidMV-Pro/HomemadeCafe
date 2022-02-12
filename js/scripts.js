@@ -1,5 +1,5 @@
 $(function() {
-    $(".carousel").carousel( { interval: 2000, pause: "false" } );
+    $(".carousel").carousel( { interval: 6000, pause: "false" } );
     $("#carouselButton").click(function(){
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
             $(".carousel").carousel("pause");
@@ -11,4 +11,18 @@ $(function() {
             $("#carouselButton").children("i").addClass("fa-pause");
         }
     })
+    //reserve
+    $("#reserveButton").on("click", function () {
+        $("#reserveModal").modal("toggle");
+    });
+
+    //reserve
+    $("#loginButton").on("click", function () {
+        $("#loginModal").modal("toggle");
+    });
+
+    //reserve
+    $("#donateButton").on("click", function () {
+        $("#donateModal").modal("toggle");
+    });
 });
